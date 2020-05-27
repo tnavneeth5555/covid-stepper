@@ -1,0 +1,23 @@
+<h3 class="text-center">History of Orders</h3>
+<hr>
+<br>
+<div class="container"  >
+    <div class="row">
+        <div class="col-md-6" *ngFor="let i of orders">
+            <div class="card">
+                <div class="card-header">
+                  Slot On {{i["date"]}} at {{i["time"]}}
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">SLOT-ID : STPR{{i["_id"]}}</h5>
+                  <p class="card-text">Name : {{i["cus_name"]}}</p>
+                  <p class="card-text">Age : {{i["age"]}}</p>
+                  <p class="card-text">Contact No : {{i["cus_ph"]}}</p>
+                  <p class="card-text">Gender : {{i["gender"]}}</p>
+                </div>
+              </div>
+              <br>
+            </div>
+        </div>
+
+    </div>

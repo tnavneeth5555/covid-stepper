@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <br>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card"><img src="../assets/Images/item images/{{ls.busname}}.jpg" alt="Avatar" style="width:100%"></div>
+            <br>
+            <div class="a">
+                <div class="row">
+                    <div class="col-md-2 color"><h5>Owner </h5></div>
+                    <div class="col-md-4 "><h5>{{ls.own}}</h5></div>
+                    <div class="col-md-2 color"><h5>Bussiness </h5></div>
+                    <div class="col-md-4 "><h5>{{ls.busname}}</h5></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 color"><h5>Shopname </h5></div>
+                    <div class="col-md-4 "><h5>{{ls.shopname}}</h5></div>
+                    <div class="col-md-2 color"><h5>Address </h5></div>
+                    <div class="col-md-4 "><h5>{{ls.addr}}</h5></div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-2 color"><h5>Contact </h5></div>
+                    <div class="col-md-4 "><h5>{{ls.num}}</h5></div>
+                    <div class="col-md-2 color"><h5>About </h5></div>
+                    <div class="col-md-4 "><h5>{{ls.shopdesc}}</h5></div>
+                </div> 
+            </div>       
+            <hr>
+            <br>
+                
+                
+            <div class="row">
+                <div class="col-md-5"><button routerLink="book" style="width:100%" class="btn btn-success">Book Slot</button></div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5"><button routerLink="complaint" style="width:100%" class="btn btn-danger">Complaint</button></div>
+            </div>
+           
+           
+        </div>
+        <div class="col-md-7">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    
+</div>

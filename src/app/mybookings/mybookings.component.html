@@ -1,0 +1,15 @@
+<br>
+<div class="container" *ngFor="let i of orders" >
+<div class="card">
+    <div class="card-header">
+      Slot On {{i["date"]}} at {{i["time"]}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">SLOT-ID : STPR{{i["_id"]}}</h5>
+      <p class="card-text">Name : {{i["mer_name"]}}</p>
+      <p class="card-text">Address : {{i["mer_address"]}}</p>
+      <p class="card-text">Contact No : {{i["mer_ph"]}}</p>
+    </div>
+  </div>
+  <br>
+</div>

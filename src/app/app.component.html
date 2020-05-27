@@ -1,0 +1,76 @@
+<nav class="nav navbar navbar-expand " style="background:rgb(0, 0, 0);">
+  <img src="https://www.twothousandtreesfestival.co.uk/wp-content/uploads/2018/06/Safe-Logo-2012.png" alt="sdf" width="40px">
+ 
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav">
+    <li class="nav-item ">
+      <a class="nav-link text-white" routerLink="home">Home&nbsp; &nbsp;</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link text-white" routerLink="aboutus">about Us &nbsp; &nbsp;</a>
+    </li>
+ 
+    <li class="nav-item">
+      <a class="nav-link text-white "  routerLink="contactus">ContactUs &nbsp; &nbsp;</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white "  routerLink="safetytips">Help &nbsp; &nbsp;</a>
+    </li>
+
+ 
+    <li class="nav-item nav-right " *ngIf="!ls.isloggedIn()">
+        <a class="nav-link text-white"  routerLink="login">login &nbsp; &nbsp;</a>
+      </li>
+     
+      
+    <li class="nav-item navbar-right" *ngIf="!ls.isloggedIn()">
+            <a class="nav-link text-white " routerLink="register">Sign Up &nbsp; &nbsp;</a>
+          </li>
+
+         
+  </ul>
+  </div>
+  <div class="collapse navbar-collapse navbar-right" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item navbar-right" *ngIf="ls.isloggedIn()">
+        <a class="nav-link text-white ">Hi! {{ name }} &nbsp; &nbsp; &nbsp; &nbsp;</a>
+      </li>
+  
+      <li class="nav-item navbar-right" *ngIf="ls.isloggedIn() && ls.ismer()==0">
+        <a class="nav-link text-white " routerLink="logindashboard">Shops &nbsp; &nbsp; &nbsp; </a>
+      </li>
+      <li class="nav-item navbar-right" *ngIf="ls.isloggedIn() && ls.ismer()==0">
+        <br>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          More
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" routerLink="mybookings">My Bookings</a>
+          <a class="dropdown-item" href="#">Raised Complaints</a>
+          <a class="dropdown-item" href="#">Notifications</a>
+          <a class="dropdown-item" href="#">Help</a>
+        </div>
+        &nbsp; &nbsp; &nbsp; 
+      </div>
+    </li>
+  
+      <li class="nav-item navbar-right" *ngIf="ls.isloggedIn() && ls.ismer()==1">
+        <a class="nav-link text-white " routerLink="merchantdashboard">Dashboard &nbsp; &nbsp; &nbsp; &nbsp;</a>
+      </li>
+
+     
+  <li class="nav-item navbar-right" *ngIf="ls.isloggedIn()">
+    <a class="nav-link text-white " (click)="ls.logout()"><button class ="btn btn-warning">LogOut </button></a>
+  </li>
+</ul>
+</div>
+  
+</nav>
+  
+  <router-outlet> </router-outlet>
+  

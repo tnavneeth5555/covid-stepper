@@ -1,0 +1,31 @@
+<br>
+<form #ref="ngForm" (ngSubmit)="onSubmit(ref.value)" >
+    <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Name</label>
+                                <input type="text" name="name" class="form-control" id="inputEmail4" placeholder="name of the person who goes to shop" ngModel>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Contact</label>
+                                <input type="text" name="contact" class="form-control" id="inputEmail4" placeholder="Enter Mobile number" ngModel>
+                            </div>
+                            <div class="form-group col-md-12">
+                                    <label for="inputState">Reason for the Complaint</label>
+                                    <select id="inputState" name="com_reason"class="form-control" placeholder="Sekect Gender" ngModel>
+                                    <option selected >Selling goods without booking id</option>
+                                    <option>Not using the application</option>
+                                    <option>Not Following Social distancing</option>
+                                    <option>Not wearing mask</option>
+                                    <option>Others</option>
+                                    </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="inputEmail4">Complaint Description</label>
+                                <textarea type="text" name="com_desc" class="form-control" style="height:100px" id="inputEmail4" placeholder="Enter Mobile number" ngModel></textarea>
+                            </div>
+                                <br>
+    </div>
+    <div class="text-center">
+    <button type="submit"  class="btn btn-primary ">Confirm</button></div>
+    
+  </form>

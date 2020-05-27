@@ -1,0 +1,51 @@
+<br>
+
+    <div class="row " >
+        <div class="col-md-3 text-center" *ngFor="let i of displaydates;">
+        <div class="card   "  style="width: 149px;height:60px">
+           <button class="btn btn-warning" style="width:100%; height:100%" (click)=datefun(i)> <h3>{{i}}</h3></button>
+        </div>
+       
+    </div>
+    
+</div>
+<br>
+<div class="row">
+    <div class="col-md-2" *ngFor="let i of displaytimes;">
+    <div class="card text-center "  style="width: 130px;height:60px">
+       <button style="width:100%; height:100%" (click)=timefun(i)> <h3>{{i}}-{{i+1}}</h3></button>
+    </div>
+   <br>
+</div>
+</div>
+<h3>You have Selected the slot  {{selectedtime}} on {{selecteddate}}</h3>
+<br>
+<form #ref="ngForm" (ngSubmit)="onSubmit(ref.value)" >
+    <div class="form-row">
+        
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Name</label>
+                                <input type="text" name="name" class="form-control" id="inputEmail4" placeholder="name of the person who goes to shop" ngModel>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Age</label>
+                                <input type="text" name="age" class="form-control" id="inputEmail4" placeholder="Age of the person" ngModel>
+                            </div>
+                            <div class="form-group col-md-6">
+                                    <label for="inputState">Gender</label>
+                                    <select id="inputState" name="gender"class="form-control" placeholder="Sekect Gender" ngModel>
+                                    <option selected >Male</option>
+                                    <option>Female</option>
+                                    <option>Others</option>
+                                    </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Contact</label>
+                                <input type="text" name="contact" class="form-control" id="inputEmail4" placeholder="Enter Mobile number" ngModel>
+                            </div>
+                                <br>
+    </div>
+    <div class="text-center">
+    <button type="submit"  class="btn btn-primary ">Confirm</button></div>
+    
+  </form>

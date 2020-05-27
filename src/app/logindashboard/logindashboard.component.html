@@ -1,0 +1,66 @@
+
+<div class="a" style="background:rgb(6, 1, 53)">
+
+        <div class="container ">
+          <div class="row align-items-center" style="color:white;">
+            <div class="col-sm-3 text-center" style="color:white;"><img src="../assets/Images/1.webp" style="padding:3ex;" height="100ex"><br>
+              <h4>Select Time & order your Needs</h4><p style="color:rgb(255, 145, 0)">Order in for yourself or group for any things in your by shops.  </p></div>
+            <div class="col-sm-3 text-center" style="color:white;"><br><img src="../assets/Images/2a.svg" style="padding:3ex;" height="80ex"><br><br><h4>Pay the bill for your goods</h4><p style="color:rgb(255, 145, 0)">Keep your bussiness online and make your market more nad more.Now your Records of data will be digital.  </p></div>
+          
+            <div class="col-sm-3 text-center" style="color:white;"><img src="../assets/Images/4a.webp"  style="padding:3ex;"height="100ex;"><br><h4>Step Out at Given Slot</h4><p style="color:rgb(255, 145, 0)">Experience the Superfast delivery from Quickbuy.com </p></div>
+            <div class="col-sm-3 text-center" style="color:white;"><br><img src="https://cdn2.iconfinder.com/data/icons/color-svg-money-icons/512/full_basket_shopping-512.png"  style="padding:3ex;"width="80ex" height="80ex"><br><br><h4>Get the Goods </h4><p style="color:rgb(255, 145, 0)">Choose the shops select your favorite items in diiferent sources and pick your stuff allow for delivery.  </p></div>
+          </div>
+        </div>
+      <br><br><br>
+      <div class="container">
+      <h3 style="color:rgb(255, 145, 0)">Did you find any shop not using stepper.com ? <a class="btn btn-warning btn-lg" style="color:black;" data-toggle="modal" data-target="#myModal"><u>Raise your Complaint Here</u></a></h3> 
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Complaint </h4>
+            </div>
+            <div class="modal-body">
+              <p>1. Select the shop you want to raise the complaint</p>
+              <p>2. Click on complaint Button </p>
+              <p>3. Type the reason for the complaint</p>
+              <p>4. provide your contact Details and click submit</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>  
+    <br><br><br> 
+    </div>
+        <br><br>
+        <br><br>
+<div class="container">
+        <div class="row">
+          
+                <div class="col-md-3 box" *ngFor="let i of shop;">
+                        <div class="card " style="width: 25rem;">
+                                <img class="card-img-top" width="280ex" height="200ex" src="../assets/Images/item images/{{i[1]}}.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{i[0]}} - {{i[5]}}</h5>
+                                  <p class="card-text">{{i[2]}}</p>
+                                  <a  class="btn btn-primary" name="i[3]" (click)="ls.bookslot(i[3],i[0],i[1],i[2],i[4],i[5],i[6])" > Book  Now</a>
+                                </div>
+                                
+                              </div>
+                              <br>
+                </div>
+
+        </div>
+</div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    

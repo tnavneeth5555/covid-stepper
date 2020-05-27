@@ -1,0 +1,27 @@
+<h3 class="text-center">All your Shops</h3>
+<hr>
+<br>
+<div class="a" *ngFor="let i of bussiness" >
+<div class="card">
+    <div class="card-header">
+      {{i.shopname}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{i.ownname}}</h5>
+      <p class="card-text">{{i.adress}}</p>
+      <p class="card-text">{{i.shopcontact}}</p>
+      <p class="card-text">{{i.shopdesc}}</p>
+     <p>{{i._id}}</p>
+     <button type="button" (click)="addid(i._id)" class="btn btn-info btn-lg" >Add & View Items</button>
+     <br><button type="button" (click)="deleteb(i._id)" class="btn btn-info btn-lg" >Delete Bussiness</button>
+     <!-- Modal -->
+    
+     </div>
+</div>
+<br>
+</div>
+ 
+ 
+
+
+
